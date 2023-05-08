@@ -1,0 +1,16 @@
+.hero {
+  &.project-background {
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://picfiles.alphacoders.com/273/273572.jpg') no-repeat center center/cover;
+  }
+}
+.project {
+  width: 80%;
+  .center-text {
+    text-align: center;
+  }
+}

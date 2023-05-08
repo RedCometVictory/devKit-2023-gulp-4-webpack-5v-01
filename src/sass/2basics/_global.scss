@@ -1,0 +1,167 @@
+// Mobile First Design
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-bg: rgba(252, 252, 252);
+  --main-bg-a: rgba(252, 252, 252, 0.90);
+  // --navbar-color: rgb(235, 235, 235);
+  // --navbar-color-a: rgba(235, 235, 235, 0.65);
+  --navbar-color: rgb(214, 214, 214);
+  --navbar-color-a: rgba(214, 214, 214, 0.65);
+  --navbar-color-border: rgb(214, 214, 214);
+  --navbar-btn-a: rgba(214, 214, 214, 0.65);
+  --navbar-btn-icon: rgb(45, 45, 45);
+  --navbar-btn-border: rgb(214, 214, 214);
+  --navbar-btn-border-a: rgb(214, 214, 214, 0.65);
+  --color-logo:rgb(51, 51, 51);
+  --color-heading: rgb(0, 119, 255);
+  --color-text:#333333;
+  --color-border: #bbbbbb;
+  --li-hover-color: rgb(212, 211, 211);
+  --li-border:rgb(51, 51, 51);
+  --footer-bg-color-a: rgb(235, 235, 235, 1);
+  // --section-particle-mask-a: linear-gradient(to bottom, transparent 60%, black 75%);
+  --section-particles-mask-a: linear-gradient(to top, transparent 60%, black 100%);
+  --section-bg-color-a: rgba(235, 235, 235, 0);
+  --section-card-bg-a: rgba(235, 235, 235, 0);
+  --section-card-bg-tech-a: rgba(235, 235, 235, 1);
+  --section-card-tech-border-a: 0px solid rgba(10, 9, 9, 0);
+  --section-product-card-border-a: initial;
+  --section-product-info-bg-a: rgba(235, 235, 235, 1);
+  --section-product-info-border-a: initial;
+}
+:root.dark-winter {
+  --main-bg: rgb(10, 9, 9);
+  --main-bg-a: rgb(10, 9, 9, 0.75);
+  --navbar-color: rgb(10, 9, 9);
+  --navbar-color-a: rgba(10, 9, 9, 0.75);
+  --navbar-color-border: #2de9f5;
+  --navbar-btn-a: rgba(45, 233, 245, 1);
+  --navbar-btn-icon:rgb(10, 9, 9);
+  --navbar-btn-border: rgb(45, 233, 245);
+  --navbar-btn-border-a: rgb(45, 233, 245, 1);
+  --color-logo: rgb(45, 233, 245);
+  --color-heading: rgb(45, 233, 245);
+  --color-text:#B5B5B5;
+  --color-border: rgb(45, 233, 245);
+  --li-hover-color: rgb(45, 233, 245);
+  --li-border:rgb(45, 233, 245);
+  --footer-bg-color-a:rgb(10, 9, 9, 1);
+  --section-particles-mask-a: initial;
+  --section-bg-color-a: rgba(10, 9, 9, 0);
+  --section-card-bg-a: rgba(10, 9, 9, 0);
+  --section-card-bg-tech-a: rgba(10, 9, 9, 0);
+  --section-card-tech-border-a: 1px solid rgba(45, 233, 245, 1);
+  --section-product-card-border-a: 1px solid rgba(45, 233, 245, 1);
+  --section-product-info-bg-a: rgba(45, 233, 245, 0);
+  --section-product-info-border-a: 0px solid rgba(45, 233, 245, 0);
+}
+:root.dark-summer {
+  --main-bg: rgb(51, 51, 51);
+  --main-bg-a: rgb(51, 51, 51, 0.75);
+  --color-navbar: rgb(51, 51, 51);
+  --navbar-color-a: rgba(51, 51, 51, 0.75);
+  --navbar-color-border: rgb(255, 164, 0);
+  --navbar-btn-a: rgba(255, 164, 0, 1);
+  --navbar-btn-icon:rgb(45, 45, 45);
+  --navbar-btn-border: rgb(255, 164, 0);
+  --navbar-btn-border-a: rgb(255, 164, 0, 1);
+  --color-logo: rgb(255, 164, 0);
+  // --color-heading: #3684FF;
+  --color-heading: rgb(255, 164, 0);
+  --color-text:#B5B5B5;
+  --color-border: rgb(255, 164, 0);
+  --li-hover-color: rgb(255, 164, 0);
+  --li-border:rgb(255, 164, 0);
+  --footer-bg-color-a: rgb(67, 67, 67, 1);
+  --section-particles-mask-a: initial;
+  --section-bg-color-a: rgba(67, 67, 67, 1);
+  --section-card-bg-a: rgba(67, 67, 67, 1);
+  --section-card-bg-tech-a: rgba(67, 67, 67, 1);
+  --section-card-tech-border-a: 0px solid rgba(255, 164, 0, 0);
+  --section-product-card-border-a: 1px solid rgba(255, 164, 0, 1);
+  --section-product-info-bg-a: rgba(235, 235, 235, 0);
+  --section-product-info-border-a: initial;
+}
+h1 { font-size: 2em; font-weight: 800; }
+h2 { font-size: 1.5em; font-weight: 600;}
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.02em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+body {
+  background-color: #bdbdbd;
+  height: 100%;
+  line-height: 1.4;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  .root-container {
+    width: 100%;
+    .central {
+      width: 86%;
+      margin: 0 auto;
+      h1, h2, p {
+        text-align: center;
+        // color: white;
+        // font-weight: 300;
+      }
+      // justify-content: center;
+      .info-card {
+        // border: 2px solid rgb(20, 113, 115);
+        border: 2px solid rgb(245, 58, 58);
+        border-radius: 5px;
+        max-height: 1000px;
+        margin: 0 auto;
+        // align-items: center;
+        // justify-content: center;
+        max-width: 50%;
+        // color: lightgreen;
+        p {
+          margin: 10px 20px 10px 20px;
+        }
+        strong {
+          color: rgb(241, 13, 146);
+        }
+      }
+      .info-card__image {
+        max-width: 420px;
+        max-height: 820px;
+        margin: 10px auto 0px;
+        border: 2px solid teal;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        overflow: hidden;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          flex-shrink: 0;
+          // min-width: 100%;
+          // min-height: 100%
+        }
+      }
+    }
+  }
+}
+
+// a maximum of "x"px and smaller
+// desktop display... considered desktop first
+// @media (max-width: 800px) {}
+  
+// combine media features to create a media query that only works between both specified sizes:
+
+// @media (min-width: 600px) and (max-width: 900px{...}
+
+// minimum of "x"px and bigger - known as mobile-first, 
+// @media (min-width: 800px) {}
+/*
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/

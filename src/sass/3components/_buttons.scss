@@ -1,0 +1,17 @@
+#theme-active {
+  border-radius: 3px 0px 0px 3px;
+}
+#theme-switch {
+  border-radius: 0px 3px 3px 0px;
+  // &.dark-winter-sw {
+    // background-color: $dark-pt-winter;
+  // }
+  // &.dark-summer-sw {
+    // background-color: $dark-pt-summer;
+  // }
+}
+.nav-btn {
+  background-color: var(--navbar-btn-a);
+  color: var(--navbar-btn-icon);
+  border: 2px solid var(--color-navbar-border-a);
+}

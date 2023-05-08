@@ -1,0 +1,83 @@
+// swap dark / light mode
+// key=className, value=$variable
+$themes: (
+  light: (
+    backgroundColor: $light-bg,
+    foregroundColor: $light-bg-panel,
+    header: $light-color-heading,
+    textColor: $light-color-text
+  ),
+  dark: (
+    backgroundColor: $dark-bg,
+    foregroundColor: $dark-bg-panel,
+    header: $dark-color-heading,
+    textColor: $dark-color-text
+  )
+);
+// change border color of buttons and other elements
+$borderSwap: (
+  winter: (
+    border: $dark-pt-winter,
+    buttonColor: $dark-pt-winter,
+    buttonBorder: $dark-pt-winter
+    // buttonTextColor: $dark-pt-winter
+  ),
+  summer: (
+    border: $dark-pt-summer,
+    buttonColor: $dark-pt-summer,
+    buttonBorder: $dark-pt-summer
+  )
+);
+
+// @mixins used to access the values in the map, changed via class added to the html tag. Use this function to see the value belonging to the corresponding key.
+// map-get(map-get($themes, 'dark'), 'backgroundColor');
+
+// Get value from nested maps
+// map-get(map-get($themes, 'light'), 'color-background');
+
+// Get the color-background property from the active theme map and apply its value to the "background" css property
+// body {
+  // @include theme-aware('background', 'color-background');
+// }
+
+/**
+ * theme-aware - Change color of a css property based on the currently active theme
+ *
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _color-palette.scss
+ *
+ * @example - @include theme-aware('background', 'color-background');
+ * @returns - background: #FFF;
+ */
+// @mixin theme-aware($key, $color) {
+    // @each $theme-name, $theme-color in $themes {
+        // .theme-#{$theme-name} & {
+            // #{$key}: map-get(map-get($themes, $theme-name), $color)
+        // }
+    // }
+// }
+
+// .theme-<name of the theme> & { ... }
+
+// So in the end we will have
+// .theme-light & { background: #FAFAFA; }
+// .theme-dark & { background: #37474F; }
+
+// body {
+  // @include theme-aware('background', 'color-background');
+// }
+
+// It will generate the following rules:
+// body {
+  // .theme-light & { background: #FAFAFA; }
+  // .theme-dark & { background: #37474F; }
+// }
+
+// After compiling scss down to css, we get the following
+// .theme-light body {
+  // background: #FAFAFA;
+// }
+
+// .theme-dark body {
+  // background: #37474F;
+// }

@@ -1,0 +1,16 @@
+// theme-aware(css-prop<background-color>, color val <from color palette file>)
+// @example - @include theme-aware('background', 'color-background'); @returns - background: #FFF;
+@mixin theme-aware($key, $color) {
+  // keyname-valuename from $themes map; refs to light dark
+  // & refs to parent selector <being body tag> that matches theme selector
+  // @each loops through each theme
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      // use map-get to access nested map key-values
+      // $key gets the color from the theme
+      #{$key}: map-get(map-get($themes, $theme-name), $color)
+    }
+  }
+}
+
+// theme transition mixin

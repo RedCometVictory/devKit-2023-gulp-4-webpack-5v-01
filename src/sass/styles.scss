@@ -1,0 +1,25 @@
+// import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+// 1 - HELPERS
+@use "./1helpers/variables";
+
+// 2 - BASICS
+@use "./2basics/reset";
+@use "./2basics/global";
+
+// 3 - COMPONENTS
+@use "./3components/buttons";
+
+// 4 - LAYOUTS
+@use "./4layout/mainNav";
+@use "./4layout/section";
+@use "./4layout/footer";
+
+
+// 5 - PAGES
+@use "./5pages/projectDetail";
+
+// 6 - THEMES
+// import './6themes/darkLight';
+// import './6themes/landing';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,700;1,800;1,900&display=swap');

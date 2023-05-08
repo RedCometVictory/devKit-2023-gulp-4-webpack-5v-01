@@ -1,0 +1,104 @@
+// Mobile-First
+.nav-header {
+  display: flex;
+  height: 3.5em;
+  color: var(--color-text);
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5rem;
+  background-color: var(--navbar-color-a);
+  border-bottom: 1px solid var(--navbar-color-border);
+  .nav-logo {  
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    white-space: nowrap;
+  }
+  .toggler {
+    z-index: 200;
+    display: none;
+    &:checked ~ div nav .nav__item-list {
+      left: 0;
+    }
+  }
+  .burger {
+    cursor: pointer;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    flex-direction: column;
+    margin: 0.5rem;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  .nav-container {
+    margin: 0.5rem;
+    .nav {
+      align-items: center;
+      margin: 0.5rem;
+      &__item-list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--main-bg-a);
+        top: 3.5em;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+      }
+      &__item-list--secondary {
+        margin-top: -0.4rem;
+        margin-right: 3rem;
+        margin-left: 0.6rem;
+      }
+      &__item {
+        list-style: none;
+        display: block;
+        margin: 2rem 0;
+        line-height: 3rem;
+      }
+      &__link {
+        color: inherit;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0 1rem;
+        &:hover {
+          border-bottom: 1px solid var(--li-border);
+          padding-bottom: 0.25rem;
+          transition: ease-in-out .1s;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Screen Format
+@media (min-width: 820px) {
+  .burger {
+    display: none;
+  }
+  .nav-header {
+    .nav-container {
+      .nav {
+        display: flex;
+        align-items: center;
+        margin-top: 0rem;
+        &__item-list {
+          all: unset;
+          list-style: none;
+          display: flex;
+        }
+        &__item-list--secondary {
+          margin-top: 0rem;
+          margin-right: 0rem;
+        }
+        &__item {
+          margin: 0;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}
