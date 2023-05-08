@@ -6,31 +6,43 @@ module.exports = {
   target: "web",
   // devtool: "none",
   devtool: "source-map",
+  output: {
+    publicPath: './dist',
+  },
   devServer: {
     // localhost port override
     port: 4500,
     // where live server looks at: files are not created (only in memory) but are still served
     // contentBase: __dirname + './public/index.html'
     // contentBase: path.resolve(__dirname, "./dist"),
-    contentBase: path.join(__dirname, "./dist"),
-    watchContentBase: true,
+    // contentBase: path.join(__dirname, "./dist"), // * option changed to static
+    static: path.join(__dirname, "./dist"),
+    // * seems watchcontentbase was changed to static OR was removed completely
+    // watchContentBase: true,
     // public path needed for live reload to occur
-    publicPath: './dist', // ---
+    // publicPath: './dist', // ---
     // contentBase: path.resolve(__dirname, './public/index.html')
     // save changes to disk rather then RAM memory
-    writeToDisk: true,
+    // writeToDisk: true,
     historyApiFallback: true,
-    progress: true,
+    // progress: true,
     // enable hot module reload, does not need to be installed. becomes more useful as the project grows
     // hot: true,
     // hotOnly: true,
-    // compress: true,
+    // compress: true, // valid option
     // inline: true,
     // proxy used w/nodemon that runs db server, sets live-server to devServer.port 
     open: true,
-    watchOptions:{
-      poll: true,
-      ignored: "/node_modules/"
+    // watchOptions:{ // * this is now an unkown server watch option
+    //   poll: true,
+    //   ignored: "/node_modules/"
+    // },
+    
+    devMiddleware: {
+      writeToDisk: true,
+    },
+    client: {
+      progress: true
     },
     proxy: {
       '/api': 'http://localhost:5000' // Server Api - http:localhost:5000 + '/api/destination' ###Default Proxy
@@ -40,6 +52,10 @@ module.exports = {
         // pathRewrite: {'^/api': ''}
       // }
     }
+  },
+  watchOptions:{ // * this is now an unkown server watch option
+    poll: true,
+    ignored: "/node_modules/"
   },
   entry: {
     // index: "./resources/assets/js/index.js"    // for adonis

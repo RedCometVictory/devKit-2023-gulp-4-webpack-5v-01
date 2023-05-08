@@ -1,12 +1,10 @@
 # Setting up the Starter Pack
 ## Introduction
-This developer kit is built primarily for MERN or PERN applications. Using both Gulp and Webpack to minify files, or you can opt to use only Webpack to minify and compile everything. I created this starter kit to encourage devs get more comfortable with Webpack. Hopefully settling for Webpack altogether as it is a very awesome tool. Though Gulp is more streamlined, so take your pick.
+This developer kit is built primarily for MERN / PERN applications. Using both Gulp and Webpack to minify files, or you can opt to use only Webpack to minify and compile everything.
 
-Gulp is a bit easier to work with, but Webpack is powerful. However, Webpack is a bit complex and the documentation is a bit verbose (its not beginner friendly). So I decided to put both into a single developer kit. I have written comments to help explain how things work to those willing to give this starter kit a try.
+Gulp is more streamlined & easier to work with, but Webpack is very powerful. However, Webpack is a bit complex and the documentation is a bit verbose (its not beginner friendly). Only Gulp is equipped to work for static site development.
 
-Yes, I try to actively keep things as updated as possible. Only Gulp is equipped to work for static site development. I'll probably look into interating Gatsby into Webpack at some point.
-
-TIPS: A New Project With Webpack 5 & its dev-server
+STARTING-OFF: A New Project With Webpack 5 ONLY & its dev-server?
 
 It is recommended to run the following command first.
 ```
@@ -17,11 +15,10 @@ Then run the dev server:
 npm run serve-webpack
 ```
 
-Webpack dev server does not work properly if running in more than one tab. No duplicate tabs! Also, before launching a new dev server, ensure that no previous server tabs are open. I'm still trying to work out the kinks in Webpack 5.
+Potential Errors:
+Webpack dev server may not work properly if running in more than one tab. So no duplicate tabs! Also, before launching a new dev server, ensure that no previous server tabs are open. (I'm still trying to work out the kinks in Webpack 5).
 
-If you immediatly run the dev server and "Cannot GET /" appears on screen OR if the screen is solid white, a hard refresh may be required in order to view contents on screen. However, this only creates JavaScript bundles thus it is RECOMMENDED to delete the dist folder and follow the proper commmand order as laid out above!
-
-If the server does not reload use CTRL+SHIFT+R (a hard refresh) in the browser, this may help, if not restart the dev server (refer to above commands).
+If you immediatly run the dev server and "Cannot GET /" appears on screen OR if the screen is solid white, a hard refresh may be required (CTRL + SHIFT + R) in order to view contents on screen, if not restart the dev server (refer to above commands). However if also using Gulp, this may only create JavaScript bundles thus it is RECOMMENDED to delete the dist folder and follow the proper command order as laid out above!
 
 If links to images are added and if the image is in the src/img folder and webpack does not reload to include the image into the dist folder (and if the image does not appear) - run the command (dev-server can be run simultaneously):
 ```
@@ -30,6 +27,8 @@ npm run images
 
 Image should now be picked up / view by the dev server. If not perform a hard reload.
 --------------------
+--------------------
+USING GULP & WEBPACK
 --------------------
 --------------------
 To get started with the default setup use: 

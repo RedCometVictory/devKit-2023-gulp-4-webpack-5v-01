@@ -11,24 +11,27 @@ const App = () => {
 
   return (
     <main className="central">
-      <h1>Starter Pack -2021- Active</h1>
+      <h1>Starter Pack -2023- Active</h1>
       <h2>Recommended MVC folder structure already created. Change to your liking.</h2>
       <br/>
       <p>Gulp (npm run watch) is default server.</p>
-      <p>Running both Gulp and Webpack live-servers simultaneously will create conflicts in code and is not recommended.</p>
+      <p>Running both Gulp and Webpack live-servers simultaneously will create conflicts in code and is NOT recommended.</p>
+      <br />
       <p>If using gulp live server make sure to comment out the indicated sections of webpack settings in the development file.</p>
+      <br />
       <p>Run Webpack live server and compiler, without Gulp, via (npm run serve-webpack) command. Just be sure to change how images and stylings are imported into the App.js component (typically an issue when implementing React). Check the ReadMe for more details.</p>
       <br/>
       <div className="info-card">
-        <p>This start-up pack is set to run MERN or PERN stack apps. Additionally it can run the AdonisJS framework.</p>
-        <p>I am considering on integrating Gatsby into this dev-kit for static development.</p>
-        <p>By default, GulpJS compiles CSS, images, and any templates while providing a live-server. Webpack compiles our Javascript code.</p>
+        <p>This start-up pack is set to run MERN / PERN stack apps.</p>
+        <p>By default, GulpJS compiles CSS, images, and any templates while providing a live-server. Webpack compiles Javascript code.</p>
         <p>***NOTE***</p>
         <p>Gulp seems to reload twice - once for stylings and html and a second time as webpack compiles the code. Will try to look for a solution. If stylings somehow refuse to change when Gulp refreshes its live-server, you may need to delete the /dist/img/styles.css file (& maybe the index.bundle) and try 'npm run watch' again.</p>
+        <h3>Run Webpack Only</h3>
         <pre><code>npm run serve-webpack</code></pre>
-        <p>Alternatively Webpack will provide its own live-server, proxy and takes control of compiling all files and images. Be sure to uncomment all loader sections if making the switch which is recommended. Also, it's recommened to stop using Gulp as it may create conflicts in your code.</p>
-        <p>Run a proxy server through gulpJS. Multiple servers can be run in this manner. For example, running AdonisJS server along with this proxy.</p>
-        <p><strong>Gulp 4.0.2</strong> & <strong>Webpack 5.38.1</strong> versions used.</p>
+        <p>Alternatively Webpack will provide its own live-server, proxy and takes control of compiling all files and images. Be sure to uncomment all loader sections if using Webpack for compiling. Also, it's recommened to stop using Gulp as it may create conflicts in your code.</p>
+        <h3>Proxy Server</h3>
+        <p>Run a proxy server through gulpJS. Multiple servers can be run in this manner.</p>
+        <p><strong>Gulp 4.0.2</strong> & <strong>Webpack 5.82.0</strong> versions used.</p>
         <h2>Have Fun and Happy Coding!</h2>
         <p></p>
         <p>Picture of - Tenshi Hinanawi</p>
