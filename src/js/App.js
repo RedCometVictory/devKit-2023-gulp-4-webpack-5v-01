@@ -17,9 +17,9 @@ const App = () => {
       <p>Gulp (npm run watch) is default server.</p>
       <p>Running both Gulp and Webpack live-servers simultaneously will create conflicts in code and is NOT recommended.</p>
       <br />
-      <p>If using gulp live server make sure to comment out the indicated sections of webpack settings in the development file.</p>
+      <p>If using gulp live server make sure to comment out the indicated sections of webpack settings in the development file. <strong>Gulp is best suited running by itself for situations in which you are developing html emails or static sites (html, ejs, anything simple).</strong></p>
       <br />
-      <p>Run Webpack live server and compiler, without Gulp, via (npm run serve-webpack) command. Just be sure to change how images and stylings are imported into the App.js component (typically an issue when implementing React). Check the ReadMe for more details.</p>
+      <p>Run Webpack live server and compiler, without Gulp, via (npm run serve-webpack) command. Just be sure to change how images and stylings are imported into the App.js component (typically an issue when implementing React). Check the <em>ReadMe</em> for more details. <strong>Webpack is best suited running by itself for building SPAs or more complex apps using ReactJS.</strong></p>
       <br/>
       <div className="info-card">
         <p>This start-up pack is set to run MERN / PERN stack apps.</p>
