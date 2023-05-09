@@ -69,6 +69,7 @@ const serverProxy = () => {
 };
 
 // run webpack development mode - compile js only
+// * if creating html emails or static sites then comment out the webpackDev section & use the alternative default method
 let webpackDev = (cb) => {
   return exec("npm run webpack-dev", (err, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
@@ -117,9 +118,8 @@ const watchAll = (cb) => {
   watch("./src/sass/**/*.scss", styles); // --- use this
   watch("./src/sass/styles.scss", styles); // --- use this
   // watch("./src/sass/**/*.scss", series(styles, reload));
-  // watch("./resources/assets/sass/**/*.scss", styles); // --- usse this
   // watch("./src/js/**/*.js", series(webpackDev, reload));
-  watch("./src/js/**/*.js", webpackDev);
+  watch("./src/js/**/*.js", webpackDev); // * --- use this, if creating html emails or static sites then comment out
   // watch("./resources/assets/js/**/*.js", webpackDev);
   watch([
     "./dist/*",
@@ -237,6 +237,10 @@ exports.watchProxy = series(
 exports.default = series(
   webpackDev, styles, watchAll
 );
+// * use this default if creating static sites or html emails
+// exports.default = series(
+//   styles, watchAll
+// );
 
 
 		// function cleanUrl() {
